@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="./style/main.css" />
+    <!--Owl Css-->
+    <link rel="stylesheet" href="./style/owl/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./style/owl/owl.theme.default.min.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h2 class="logo">NETFLIX</h2>
+      <nav class="nav-list" id="nav">
+        <button
+          id="btn-mobile"
+          aria-label="Abrir Menu"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <span id="hamburguer"></span>
+        </button>
+        <ul id="menu" role="menu">
+          <li>
+            <a href="https://www.netflix.com/br/" target="_blank">Início</a>
+          </li>
+          <li>
+            <a href="https://www.netflix.com/br/" target="_blank">Séries</a>
+          </li>
+          <li>
+            <a href="https://www.netflix.com/br/" target="_blank">Filmes</a>
+          </li>
+          <li>
+            <a href="https://www.netflix.com/br/" target="_blank"
+              >Documentários</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="filme-principal">
+        <div class="container">
+          <h3 class="titulo">A CASA DE PAPEL</h3>
+          <p class="descricao">
+            Um homem misterioso que atende pelo nome de Professor, está
+            planejando o maior assalto do século. Ele recruta uma gangue de oito
+            pessoas que não tem nada a perder. O objetivo é infiltrar na Casa da
+            Moeda, de modo que eles possam imprimir 2,4 bilhões de euros.
+          </p>
+          <div class="botoes">
+            <a
+              href="https://www.youtube.com/watch?v=iS5xXr-GOnM"
+              target="_blank"
+              ><button role="button" class="botao">
+                <i class="fas fa-play"></i>ASSISTIR
+              </button></a
+            >
+            <button
+              role="button"
+              class="botao"
+              id="informacao"
+              onclick="informacao()"
+            >
+              <i class="fas fa-info"></i>INFORMAÇÕES
+            </button>
+            <div id="informacao_1"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="carrosel-filmes">
+      <h2 class="mais-assistidos">Mais Assistidos</h2>
+      <div class="owl-carousel owl-theme">
+        <a href="https://www.youtube.com/watch?v=kVrqfYjkTdQ" target="_blank"
+          ><div class="item">
+            <img
+              class=".box-filme"
+              src="./img/mini1.jpg"
+              alt="Titanic"
+              srcset=""
+            /></div
+        ></a>
+        <a href="https://www.youtube.com/watch?v=8uubih798tg" target="_blank"
+          ><div class="item">
+            <img
+              class=".box-filme"
+              src="./img/mini2.jpg"
+              alt="Ghost"
+              srcset=""
+            /></div
+        ></a>
+        <a href="https://www.youtube.com/watch?v=MxqsmsA8y5k" target="_blank"
+          ><div class="item">
+            <img
+              class=".box-filme"
+              src="./img/mini3.jpg"
+              alt="Harry Potter"
+              srcset=""
+            /></div
+        ></a>
+        <a href="https://www.youtube.com/watch?v=5NYt1qirBWg" target="_blank"
+          ><div class="item">
+            <img
+              class=".box-filme"
+              src="./img/mini4.jpg"
+              alt="Harry Potter"
+              srcset=""
+            /></div
+        ></a>
+        <a href="https://www.youtube.com/watch?v=2-_-1nJf8Vg" target="_blank"
+          ><div class="item">
+            <img
+              class=".box-filme"
+              src="./img/mini5.jpg"
+              alt="A Garota Exemplar"
+              srcset=""
+            /></div
+        ></a>
+        <a href="https://www.youtube.com/watch?v=zSWdZVtXT7E" target="_blank"
+          ><div class="item">
+            <img
+              class=".box-filme"
+              src="./img/mini6.jpg"
+              alt="Interestelar"
+              srcset=""
+            /></div
+        ></a>
+        <a href="https://www.youtube.com/watch?v=k-CB7GLfhMk" target="_blank"
+          ><div class="item">
+            <img
+              class=".box-filme"
+              src="./img/mini7.jpg"
+              alt="Morte em Buenos Aires"
+              srcset=""
+            /></div
+        ></a>
+        <a href="https://www.youtube.com/watch?v=R2yqqdjrn1g" target="_blank"
+          ><div class="item">
+            <img
+              class=".box-filme"
+              src="./img/mini8.jpg"
+              alt="Lances da Vida"
+              srcset=""
+            /></div
+        ></a>
+        <a href="https://www.youtube.com/watch?v=s9APLXM9Ei8" target="_blank"
+          ><div class="item">
+            <img
+              class=".box-filme"
+              src="./img/mini9.jpg"
+              alt="Chernobyl"
+              srcset=""
+            /></div
+        ></a>
+        <a href="https://www.youtube.com/watch?v=ZEfnpFuzxnE" target="_blank"
+          ><div class="item">
+            <img
+              class=".box-filme"
+              src="./img/mini10.jpg"
+              alt="The Sinner"
+              srcset=""
+            /></div
+        ></a>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/07706215fc.js"></script>
+    <script src="./script/owl/jquery.min.js"></script>
+    <script src="./script/owl/owl.carousel.min.js"></script>
+    <script src="./script/setup.js"></script>
+  </body>
+</html>

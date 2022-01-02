@@ -1,0 +1,248 @@
+:root{
+  --red: #E50914;
+  --black: #141414;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(90deg, #000000, #141414, #000000);
+  font-family: 'Times New Roman', Times, serif;
+  color: #ffffff;
+}
+
+header{
+  height: 12vh;
+}
+
+header .logo{
+  color: var(--red);
+  font-family: Arial, Times, serif;
+  font-size: 40px;
+  margin-left: 2%;
+}
+
+#menu a{
+  display: block;
+  padding: .5rem;
+}
+
+#btn-mobile{
+  display: none;
+}
+
+header nav a{
+  font-family: Arial, Times, serif;
+  text-decoration: none;
+  color: #aaaaaa;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+header nav a:hover{
+  color: #ffffff;
+}
+
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#menu{
+  display: flex;
+  list-style: none;
+  gap: .5rem;
+}
+
+
+/* ----- Filme Principal ----- */
+
+.filme-principal{
+  height: 450px;
+  font-size: 16px;
+  background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('../img/capa.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.filme-principal .container{
+  padding: 4%;
+  width: 60%;
+}
+
+.box-filme{
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.filme-principal .descricao{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.filme-principal .titulo{
+  font-size: 45px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  
+}
+
+.botao{
+  background-color: rgba(0,0,0,.50);
+  border: none;
+  color: #ffffff;
+  padding: 15px 30px;
+  margin-right: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: .3s ease all;
+}
+
+.botao i{
+  margin-right: 10px;
+}
+
+.botao:hover{
+  color: #141414;
+  background-color: #ffffff;
+}
+
+.mais-assistidos{
+  font-size: 1.5rem;
+  padding: 10px 0 10px 0;
+  font-family: Arial, sans-serif;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.item:hover{
+  border: 3px solid var(--red);
+  cursor: pointer;
+}
+
+.info{
+  font-size: 20px;
+  padding: 20px 0 0 0;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media screen and (max-width: 700px){  
+  #btn-mobile{
+    display: block;
+  }
+
+  body{
+    background-color: black;
+  }
+
+  #menu{
+    display: block;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    z-index: 1000;
+    height: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #nav.active #menu{
+    height: 100%;
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu a{
+    text-decoration: none;
+    font-family: Arial, Times, serif;
+    padding: 25px;
+  }
+
+  #menu li{
+    width: 100%;
+    border-bottom: 2px solid #ffffff;
+  }
+
+  #btn-mobile{
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+    color: #ffffff;
+  }
+
+  #hamburguer{
+    width: 20px;
+    border-top: 2px solid;
+  }
+
+  #hamburguer::after, #hamburguer::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    margin-top: 5px;
+    position: relative;
+  }
+
+  .botao{
+    margin-top: 5px;
+    width: 170px;
+  }
+
+  .filme-principal .container{
+    height: 100%;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  header .logo{
+    font-size: 30px;
+    margin: 8px 0 8px 15px;
+  }
+
+  header{
+    background-color: black;
+  }
+
+  .info{
+    font-size: 14px;
+  }
+
+  nav.active #hamburguer{
+    border-top-color: transparent;
+  }
+
+  nav.active #hamburguer::before{
+    transform: rotate(135deg);
+  }
+
+  nav.active #hamburguer::after{
+    transform: rotate(-135deg);
+    top: -7px;   
+  }
+
+  header nav a{
+    background-color: black;
+    color: var(--red);
+    text-align: center;
+    width: 100%;
+  }
+
+  header nav a:visited{
+    color: var(--red)
+  }
+}
